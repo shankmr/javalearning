@@ -61,6 +61,11 @@ public class StreamOperations {
 
        System.out.println(letterToCount);
 
+       Map<Boolean, List<Integer>> partitionedMap =
+               datalist.stream().collect(partitioningBy(
+                       t -> t > 3));
+       System.out.println(partitionedMap);
+
 
    }
 
